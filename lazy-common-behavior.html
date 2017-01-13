@@ -1,0 +1,43 @@
+<script>
+	var lazyCommonBehavior={
+		logic:function(a,logic,b){
+			return eval("a"+logic+"b");
+		},
+		equal:function(){
+			//等於
+			return a==b;
+		},
+		notEqual:function(){
+			//不等於
+			return a!=b;
+		},
+		gt:function(a,b){
+			//大於
+			return a>b;
+		},
+		lt:function(a,b){
+			//小於
+			return a<b;
+		},
+		isUndefined:function(){
+			for(var key in arguments){
+				var item = arguments[key];
+				if(typeof(item)=="array"){
+					if(
+						item.indexOf(null)!=-1||
+						item.indexOf(undefined)!=-1||
+						item.indexOf(false)!=-1||
+						item.indexOf("")!=-1
+					){
+						return true;
+					}
+				}else{
+					if([null,undefined,false].indexOf(item)!=-1){
+						return true;
+					}
+				}
+			}
+			return false;
+		}
+	}
+</script>
