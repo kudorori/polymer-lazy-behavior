@@ -10,7 +10,7 @@
 
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../lazy-behavior.html">
+    <link rel="import" href="../lazy-common-behavior.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
     </style>
@@ -20,9 +20,22 @@
       <h3>Basic lazy-behavior demo</h3>
       <demo-snippet>
         <template>
-          <lazy-behavior></lazy-behavior>
+          <demo-test></demo-test>
         </template>
       </demo-snippet>
     </div>
+    <dom-module id="demo-test">
+    	<template>
+
+    	</template>
+    	<script>
+	    	Polymer({
+		    	is:"demo-test",
+		    	behaviors:[
+			    	lazyCommonBehavior
+		    	]
+	    	})
+    	</script>
+    </dom-module>
   </body>
 </html>

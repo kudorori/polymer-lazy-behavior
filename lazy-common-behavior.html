@@ -3,11 +3,20 @@
 		logic:function(a,logic,b){
 			return eval("a"+logic+"b");
 		},
+		ternary:function(bool,a,b){
+			return bool?a:b;
+		},
 		equal:function(a,b){
+			return this.eq(a,b);
+		}
+		eq:function(a,b){
 			//等於
 			return a==b;
 		},
 		notEqual:function(a,b){
+			return this.notEq(a,b);
+		},
+		notEq:function(a,b){
 			//不等於
 			return a!=b;
 		},
@@ -41,3 +50,5 @@
 		}
 	}
 </script>
+
+
