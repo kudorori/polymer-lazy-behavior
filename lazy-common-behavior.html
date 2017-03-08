@@ -1,5 +1,8 @@
 <script>
-	var lazyCommonBehavior={
+	var lazyCommonBehavior = {
+  	getForKey: function(object,key){
+    	return object[key];
+  	},
 		logic:function(a,logic,b){
 			return eval("a"+logic+"b");
 		},

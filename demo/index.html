@@ -26,14 +26,20 @@
     </div>
     <dom-module id="demo-test">
     	<template>
-
+			[[ternary(undefined,'a','b')]]
     	</template>
     	<script>
 	    	Polymer({
 		    	is:"demo-test",
+		    	properties:{
+			    	
+		    	},
 		    	behaviors:[
 			    	lazyCommonBehavior
-		    	]
+		    	],
+		    	ready:function(){
+			    	this.test=undefined;
+		    	}
 	    	})
     	</script>
     </dom-module>
